@@ -1,6 +1,6 @@
 import { styled } from '@mui/material'
 import { BlockchainActions } from '../Blockchains/BlockchainActions'
-import RightIcon from '../../assets/svg/icon.svg?react'
+import RightIcon from '../../assets/svg/Icon.svg'
 
 export const Wallet = () => {
 	return (
