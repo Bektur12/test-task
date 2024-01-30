@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react'
-import { SwipeableDrawer } from '@mui/material'
+import { SwipeableDrawer, styled } from '@mui/material'
 
 type DrawerProps = {
 	children: ReactNode
@@ -14,7 +14,7 @@ export const Drawer = ({ children }: DrawerProps) => {
 	return (
 		<div>
 			<button onClick={openDrawer}>Open</button>
-			<SwipeableDrawer
+			<DrawerStyled
 				anchor='bottom'
 				open={open}
 				onClose={toggleDrawer(false)}
@@ -25,7 +25,13 @@ export const Drawer = ({ children }: DrawerProps) => {
 				}}
 			>
 				{children}
-			</SwipeableDrawer>
+			</DrawerStyled>
 		</div>
 	)
 }
+
+const DrawerStyled = styled(SwipeableDrawer)({
+	'& .MuiPaper-root': {
+		borderRadius: '10px 10px 0px 0px',
+	},
+})

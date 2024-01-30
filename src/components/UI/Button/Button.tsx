@@ -9,9 +9,8 @@ const BTN_SIZE_SETTINGS = {
 }
 
 type Props = ButtonProps & {
-	isFullWidth: string
-	isLoading: boolean
-	isDisabled: boolean
+	isLoading?: boolean
+	isDisabled?: boolean
 }
 
 export const Button = ({
@@ -36,11 +35,15 @@ export const Button = ({
 
 const StyledButton = styled(MuiButton)(({ size }) => {
 	return {
+		fontFamily: 'SF Pro',
 		height: '43px',
-		padding: '8px 12px',
-		fontFamily: 'inherit',
-		fontWeight: 400,
-		fontSize: size ? BTN_SIZE_SETTINGS[size] : '16px',
+		padding: '0px 8px',
+		fontSize: size ? BTN_SIZE_SETTINGS[size] : '15px',
+		fontWeight: '590',
 		lineHeight: '22px',
+		borderRadius: '40px',
+		backgroundColor: '#007AFF',
+		color: '#FFFFFF',
+		textTransform: 'capitalize',
 	}
 })
