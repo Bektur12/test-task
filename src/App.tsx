@@ -1,5 +1,5 @@
-import { Layout } from './components/layout/Layout'
+import { AppRoutes } from './routes/AppRoutes'
 
 export const App = () => {
-	return <Layout />
+	return <AppRoutes />
 }
