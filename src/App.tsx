@@ -1,3 +1,3 @@
 export const App = () => {
-	return <div>fdsafdsa</div>
+	return <div></div>
 }
